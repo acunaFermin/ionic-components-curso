@@ -1,0 +1,21 @@
+<app-header [titulo]="'Inicio'" ></app-header>
+
+<ion-content>
+  
+  <!-- <ion-button routerLink="/alert">
+    Alert
+  </ion-button>
+  <ion-button routerLink="/action-sheet">
+    Action sheet
+  </ion-button> -->
+
+  <ion-list>
+    
+    <ion-item *ngFor="let item of componentes" [routerLink]="item.redirecTo" detail >
+      <ion-icon [name]="item.icon" slot="start"></ion-icon>
+      <ion-label>{{item.title}}</ion-label>
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>
